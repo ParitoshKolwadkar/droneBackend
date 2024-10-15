@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    // Custom query to find a user by username and password
-    User findByUsernameAndPassword(String username, String password);
+    // Find user by username only
+    User findByUsername(String username);
 }

@@ -17,8 +17,6 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-
-
     @PostMapping("/checkLogin")
     public ResponseEntity<?> checkLogin(@RequestBody User user) {
         User foundUser = loginService.validateUser(user.getUsername(), user.getPassword());
@@ -30,5 +28,10 @@ public class LoginController {
         }
     }
 
-
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+        User registeredUser = loginService.registerUser(user);
+        return ResponseEntity.ok().body("User registered successfully");
+    }
 }
+
