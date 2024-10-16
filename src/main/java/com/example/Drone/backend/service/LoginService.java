@@ -16,8 +16,9 @@ public class LoginService {
     private UserRepository userRepository;
 
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-  @Autowired
-  private StringHttpMessageConverter stringHttpMessageConverter;
+
+    @Autowired
+    private StringHttpMessageConverter stringHttpMessageConverter;
 
     public User validateUser(String username, String password) {
             User foundUser = userRepository.findByUsername(username);
