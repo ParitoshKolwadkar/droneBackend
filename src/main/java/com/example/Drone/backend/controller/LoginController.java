@@ -1,14 +1,10 @@
 package com.example.Drone.backend.controller;
 
-import com.example.Drone.backend.model.Session;
 import com.example.Drone.backend.model.User;
 import com.example.Drone.backend.service.LoginService;
-import com.example.Drone.backend.service.SessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
