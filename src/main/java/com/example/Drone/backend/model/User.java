@@ -1,5 +1,6 @@
 package com.example.Drone.backend.model;
 
+
 import jakarta.persistence.*;
 
 @Entity
@@ -7,7 +8,9 @@ import jakarta.persistence.*;
 public class User {
 
     @Id
-    private Long id;  // Assuming 'id' is an auto-generated primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Auto-generate ID using the database
+    private Long id;  // Auto-generated primary key
+
     private String username;
     private String password;
 
@@ -39,3 +42,4 @@ public class User {
         this.password = password;
     }
 }
+

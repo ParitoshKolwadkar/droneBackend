@@ -28,10 +28,10 @@ public class LoginController {
         }
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user) {
-        User registeredUser = loginService.registerUser(user);
-        return ResponseEntity.ok().body("User registered successfully");
-    }
+        @PostMapping("/register")
+        public ResponseEntity<?> registerUser(@RequestBody User user) {
+            User registeredUser = loginService.registerUser(user);
+            return ResponseEntity.ok().body("User registered successfully");
+        }
 }
 
