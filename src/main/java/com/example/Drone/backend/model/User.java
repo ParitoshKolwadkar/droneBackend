@@ -3,16 +3,23 @@ package com.example.Drone.backend.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Auto-generate ID using the database
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  // Auto-generated primary key
 
     private String username;
     private String password;
+
+
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "fk_emp_id", referencedColumnName = "id")
+//    private List<Session> sessions ;
 
     // Constructors
     public User() {}
